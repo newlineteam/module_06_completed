@@ -1,0 +1,33 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(56, 189, 248),
+    rgb(30, 64, 175)
+  );
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  padding: 1.5rem;
+  background-color: #123a54;
+  border: 1px solid white;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+main {
+  /*These styles will allow the content to center
+   nicely on the screen*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 50vh;
+}

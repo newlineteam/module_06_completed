@@ -1,0 +1,71 @@
+/* reset */
+button {
+  all: unset;
+}
+
+.tabsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+/* Tabs list container */
+[role="tablist"] {
+  flex-shrink: 0;
+  display: flex;
+  border-bottom: 1px solid #dfdce3;
+}
+
+/* Tab trigger (tab button) */
+[role="tab"] {
+  font-family: inherit;
+  background-color: white;
+  padding: 0 20px;
+  height: 50px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1;
+  color: darkslategray;
+  cursor: pointer;
+}
+
+[role="tab"]:first-child {
+  border-top-left-radius: 6px;
+}
+[role="tab"]:last-child {
+  border-top-right-radius: 6px;
+}
+[role="tab"]:hover {
+  color: #5746af;
+}
+
+[role="tab"][aria-selected="true"] {
+  color: #5746af;
+  font-weight: 600;
+  box-shadow: inset 0 -2px 0 0 currentColor, 0 2px 0 0 currentColor;
+}
+[role="tab"]:focus {
+  position: relative;
+  box-shadow: 0 0 0 3px black;
+}
+
+[role="tabpanel"] {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: white;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  outline: none;
+  min-height: 10rem;
+}
+[role="tabpanel"]:focus {
+  outline: 3px solid black;
+  outline-offset: -5px;
+}
+[role="tabpanel"][data-active-content="false"] {
+  display: none;
+}
